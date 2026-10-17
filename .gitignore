@@ -220,6 +220,7 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Local environment and generated files
+.deploy/
 .venv/
 __pycache__/
 .pytest_cache/
