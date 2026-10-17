@@ -6,8 +6,8 @@ pipeline {
         timeout(time: 20, unit: 'MINUTES')
         buildDiscarder(logRotator(numToKeepStr: '10'))
     }
-    parameters {
-        string(name: 'PYTHON_PATH', defaultValue: 'C:/Users/86131/AppData/Local/Programs/Python/Python311/python.exe', description: 'Absolute path to Python on the Windows Jenkins machine')
+    environment {
+        PYTHON_PATH = 'C:/Users/86131/AppData/Local/Programs/Python/Python311/python.exe'
     }
     stages {
         stage('Checkout') {
