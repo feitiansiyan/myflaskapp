@@ -1,3 +1,4 @@
+import argparse
 import os
 
 from flask import Flask
@@ -11,4 +12,8 @@ def hello():
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=int(os.environ.get('PORT', '5000')))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--port', type=int,
+                        default=int(os.environ.get('PORT', '5000')))
+    args = parser.parse_args()
+    app.run(host='127.0.0.1', port=args.port)
