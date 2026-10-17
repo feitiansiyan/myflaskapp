@@ -218,3 +218,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local environment and generated files
+.venv/
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+test-results.xml
+build/
+dist/
+*.spec
